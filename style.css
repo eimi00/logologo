@@ -21,7 +21,12 @@ body {
   margin: 0;
   background: #fbfbf0;
   color: #8f9a12;
-  font-family: "Eimi00Tegaki", "Hiragino Maru Gothic ProN", sans-serif;
+  font-family:
+    "Eimi00Tegaki",
+    "Hiragino Maru Gothic ProN",
+    "Yu Gothic",
+    "YuGothic",
+    sans-serif;
   letter-spacing: 0.08em;
 }
 
