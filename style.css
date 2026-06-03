@@ -38,4 +38,11 @@ body{
     font-size: 48px;
     color: #9AA014;
     font-weight: normal;
+    line-height: 0.75;
+    text-align: center;
+    letter-spacing: 0.04em;
+}
+
+.logo span{
+  display:block;
 }
