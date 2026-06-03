@@ -24,12 +24,49 @@ body{
 .menu-btn{
     position:absolute;
     left:20px;
-
     background:none;
     border:none;
-
     font-size:32px;
     cursor:pointer;
+    z-index:30;
+}
+
+.drawer{
+  position:fixed;
+  top:0;
+  left:-72%;
+  width:72%;
+  height:100vh;
+  background:#9AA014;
+  z-index:20;
+  padding:120px 0 0 56px;
+  transition:left 0.35s ease;
+}
+
+.drawer.open{
+  left:0;
+}
+
+.drawer a{
+  display:block;
+  font-family:'EimiTegaki', sans-serif;
+  color:#fff;
+  text-decoration:none;
+  font-size:42px;
+  margin-bottom:28px;
+  letter-spacing:0.05em;
+}
+
+.overlay{
+  position:fixed;
+  inset:0;
+  background:rgba(242,240,231,0.7);
+  z-index:10;
+  display:none;
+}
+
+.overlay.open{
+  display:block;
 }
 
 .logo{
