@@ -39,7 +39,7 @@ body{
   height:100vh;
   background:#9AA014;
   z-index:20;
-  padding:120px 0 0 56px;
+  padding:180px 0 0 56px;
   transition:left 0.35s ease;
 }
 
