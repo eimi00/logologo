@@ -19,19 +19,28 @@ body{
   position:relative;
 }
 
+.menu-btn{
+  position:absolute;
+  left:20px;
+  top:28px;
+  background:none;
+  border:none;
+  font-size:32px;
+  cursor:pointer;
+  z-index:30;
+}
+
 .logo-wrap{
   position:relative;
   margin:0;
-  width:220px;
-  height:100px;
+  width:230px;
+  height:90px;
   display:flex;
   justify-content:center;
-  align-items:center;
-  overflow:visible;
+  align-items:flex-end;
 }
 
 .logo{
-  margin:0;
   font-family:'EimiTegaki', sans-serif;
   font-size:42px;
   color:#9AA014;
@@ -45,40 +54,37 @@ body{
   display:block;
 }
 
+.drawer{
+  position:fixed;
+  top:0;
+  left:-72%;
+  width:72%;
+  height:100vh;
+  background:#9AA014;
+  z-index:20;
+  padding:120px 0 0 56px;
+  transition:left 0.35s ease;
+}
+
 .spark{
   position:absolute;
-  display:block;
   width:6px;
   height:28px;
   background:#9AA014;
   border-radius:999px;
+  top:0;
 }
 
-.spark-1{
-  top:14px;
-  left:34px;
+.spark-left{
+  left:54px;
   transform:rotate(-35deg);
 }
 
-.spark-2{
-  top:2px;
-  left:107px;
+.spark-center{
+  left:112px;
 }
 
-.spark-3{
-  top:14px;
-  right:34px;
+.spark-right{
+  right:54px;
   transform:rotate(35deg);
-}
-
-.spark-4{
-  display:none;
-}
-
-.spark-5{
-  display:none;
-}
-
-.spark-6{
-  display:none;
 }
