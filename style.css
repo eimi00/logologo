@@ -33,6 +33,7 @@ body {
 .logo-wrap {
   position: relative;
   margin: 0;
+  margin-top:20px;
   width: 230px;
   height: 95px;
   display: flex;
@@ -64,16 +65,16 @@ body {
 }
 
 .spark-left {
-  left: 54px;
+  left: 65px;
   transform: rotate(-35deg);
 }
 
 .spark-center {
-  left: 112px;
+  left: 88px;
 }
 
 .spark-right {
-  right: 54px;
+  right: 65px;
   transform: rotate(35deg);
 }
 
