@@ -1,38 +1,82 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>logologo</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>LOGO LOGO</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
-
 <body>
   <header class="header">
     <button class="menu-btn" id="menuBtn" aria-label="メニューを開く">
-      ☰
+      <span></span>
+      <span></span>
+      <span></span>
     </button>
 
-    <h1 class="logo-wrap">
-      <span class="spark spark-left"></span>
-      <span class="spark spark-center"></span>
-      <span class="spark spark-right"></span>
-
-      <span class="logo">
-        <span>LOGO</span>
-        <span>LOGO</span>
-      </span>
-    </h1>
+    <h1 class="logo">LOGO<br>LOGO</h1>
   </header>
 
   <nav class="drawer" id="drawer">
-    <a href="#">HOME</a>
-    <a href="#gallery">GALLERY</a>
-    <a href="#about">ABOUT</a>
-    <a href="#link">LINK</a>
+    <div class="drawer-logo">LOGOLOGO</div>
+
+    <ul class="drawer-nav">
+      <li><a href="#home">HOME</a></li>
+      <li><a href="#gallery">GALLERY</a></li>
+      <li><a href="#about">ABOUT</a></li>
+      <li><a href="#link">LINK</a></li>
+    </ul>
+
+    <img src="img/menu-character.png" alt="" class="drawer-character">
   </nav>
 
   <div class="overlay" id="overlay"></div>
+
+  <main id="home">
+    <section class="hero">
+      <div class="hero-track">
+        <img src="img/main-1.png" alt="">
+        <img src="img/main-2.png" alt="">
+        <img src="img/main-3.png" alt="">
+      </div>
+    </section>
+
+    <section class="gallery" id="gallery">
+      <h2>GALLERY</h2>
+
+      <div class="gallery-frame">
+        <div class="gallery-grid">
+          <img src="img/gallery-1.png" alt="">
+          <img src="img/gallery-2.png" alt="">
+          <img src="img/gallery-3.png" alt="">
+          <img src="img/gallery-4.png" alt="">
+          <img src="img/gallery-5.png" alt="">
+          <img src="img/gallery-6.png" alt="">
+          <img src="img/gallery-7.png" alt="">
+          <img src="img/gallery-8.png" alt="">
+          <img src="img/gallery-9.png" alt="">
+          <img src="img/gallery-10.png" alt="">
+        </div>
+      </div>
+    </section>
+
+    <section class="about" id="about">
+      <h2>ABOUT</h2>
+
+      <img src="img/about.png" alt="エイミ00もちまろ" class="about-icon">
+
+      <h3>エイミ00もちまろ</h3>
+      <p class="id">eimizerozeromochimaro</p>
+      <p>
+        もちまろの世界を中心に<br>
+        イラストや3D制作などをしています 🦀
+      </p>
+    </section>
+  </main>
+
+  <footer class="footer" id="link">
+    FOOTER
+  </footer>
 
   <script src="script.js"></script>
 </body>
