@@ -1,3 +1,10 @@
+@font-face {
+    font-family: 'EimiTegaki';
+    src: url('fonts/Eimi00_tegaki-Regular.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
 body{
     margin:0;
     background:#F2F0E7;
@@ -29,6 +36,7 @@ body{
 
     color:#95a10e;
 
+    font-family: 'EimiTegaki', sans-serif;
     font-size:36px;
     font-weight:bold;
 }
