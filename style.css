@@ -1,3 +1,11 @@
+@font-face {
+  font-family: "Eimi00Tegaki";
+  src: url("fonts/Eimi00_tegaki-Regular.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
 * {
   box-sizing: border-box;
 }
@@ -10,8 +18,12 @@ body {
   margin: 0;
   background: #fbfbf0;
   color: #8f9a12;
-  font-family: "Arial Rounded MT Bold", "Hiragino Maru Gothic ProN", sans-serif;
+  font-family: "Eimi00Tegaki", "Hiragino Maru Gothic ProN", sans-serif;
   letter-spacing: 0.08em;
+}
+
+body.is-fixed {
+  overflow: hidden;
 }
 
 img {
@@ -19,27 +31,31 @@ img {
   display: block;
 }
 
+/* ヘッダー */
+
 .header {
-  position: relative;
+  position: sticky;
+  top: 0;
+  left: 0;
   height: 140px;
   display: flex;
   align-items: center;
   justify-content: center;
   background: #fbfbf0;
-  z-index: 10;
+  z-index: 900;
 }
 
 .logo {
   margin: 0;
   color: #8f9a12;
-  font-size: 34px;
-  line-height: 0.85;
+  font-size: 42px;
+  line-height: 0.78;
   text-align: center;
-  letter-spacing: 0.12em;
+  letter-spacing: 0.08em;
 }
 
 .menu-btn {
-  position: absolute;
+  position: fixed;
   left: 44px;
   top: 48px;
   width: 54px;
@@ -48,7 +64,7 @@ img {
   background: transparent;
   padding: 0;
   cursor: pointer;
-  z-index: 1001;
+  z-index: 1200;
 }
 
 .menu-btn span {
@@ -58,7 +74,14 @@ img {
   margin-bottom: 9px;
   background: #8f9a12;
   border-radius: 999px;
+  transition: background 0.2s ease;
 }
+
+body.is-fixed .menu-btn span {
+  background: #fff;
+}
+
+/* メインビジュアル */
 
 .hero {
   overflow: hidden;
@@ -80,6 +103,8 @@ img {
   border-radius: 72px;
 }
 
+/* GALLERY */
+
 .gallery {
   background: #939d12;
   color: #fff;
@@ -91,7 +116,7 @@ img {
 .about h2 {
   display: inline-block;
   margin: 0 0 42px;
-  font-size: clamp(36px, 7vw, 58px);
+  font-size: clamp(42px, 7vw, 64px);
   line-height: 1;
   border-bottom: 5px solid currentColor;
   padding-bottom: 12px;
@@ -138,6 +163,8 @@ img {
   object-fit: cover;
 }
 
+/* ABOUT */
+
 .about {
   background: #fbfbf0;
   text-align: center;
@@ -155,20 +182,22 @@ img {
 
 .about h3 {
   margin: 0;
-  font-size: clamp(24px, 6vw, 38px);
+  font-size: clamp(28px, 6vw, 42px);
   line-height: 1.1;
 }
 
 .about .id {
   margin: 4px 0 32px;
-  font-size: 18px;
+  font-size: 20px;
 }
 
 .about p {
   margin: 0;
-  font-size: clamp(16px, 4vw, 22px);
+  font-size: clamp(18px, 4vw, 24px);
   line-height: 2;
 }
+
+/* FOOTER */
 
 .footer {
   height: 190px;
@@ -177,19 +206,20 @@ img {
   justify-content: center;
   background: #cbc5a4;
   color: #fff;
-  font-size: 28px;
+  font-size: 32px;
 }
 
-/* ハンバーガーメニュー */
+/* 横から出るメニュー */
 
 .drawer {
   position: fixed;
   inset: 0 auto 0 0;
   width: min(52vw, 520px);
-  min-width: 320px;
+  min-width: 340px;
+  height: 100vh;
   background: #939d12;
   color: #fff;
-  z-index: 1000;
+  z-index: 1100;
   transform: translateX(-100%);
   transition: transform 0.35s ease;
   padding: 42px 7vw;
@@ -200,8 +230,10 @@ img {
 }
 
 .drawer-logo {
-  font-size: clamp(26px, 5vw, 44px);
+  font-size: clamp(32px, 5vw, 52px);
+  line-height: 1;
   margin-left: 90px;
+  white-space: nowrap;
 }
 
 .drawer-nav {
@@ -217,8 +249,8 @@ img {
 .drawer-nav a {
   color: #fff;
   text-decoration: none;
-  font-size: clamp(34px, 6vw, 52px);
-  font-weight: bold;
+  font-size: clamp(40px, 6vw, 60px);
+  line-height: 1;
 }
 
 .drawer-character {
@@ -232,7 +264,7 @@ img {
   position: fixed;
   inset: 0;
   background: rgba(251, 251, 240, 0.75);
-  z-index: 999;
+  z-index: 1000;
   opacity: 0;
   pointer-events: none;
   transition: opacity 0.35s ease;
@@ -241,10 +273,6 @@ img {
 .overlay.is-open {
   opacity: 1;
   pointer-events: auto;
-}
-
-body.is-fixed {
-  overflow: hidden;
 }
 
 /* スマホ */
@@ -267,7 +295,7 @@ body.is-fixed {
   }
 
   .logo {
-    font-size: 28px;
+    font-size: 34px;
   }
 
   .hero-track {
@@ -301,7 +329,7 @@ body.is-fixed {
 
   .drawer-logo {
     margin-left: 70px;
-    font-size: 28px;
+    font-size: 30px;
   }
 
   .drawer-nav {
@@ -309,7 +337,7 @@ body.is-fixed {
   }
 
   .drawer-nav a {
-    font-size: 34px;
+    font-size: 38px;
   }
 
   .drawer-character {
