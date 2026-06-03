@@ -69,6 +69,15 @@ body{
   display:block;
 }
 
+.logo-wrap{
+  position:relative;
+  margin:0;
+  width:210px;
+  height:90px;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+}
 .logo{
     margin:0;
     font-family: 'EimiTegaki', sans-serif;
@@ -82,4 +91,47 @@ body{
 
 .logo span{
   display:block;
+}
+
+.spark{
+  position:absolute;
+  display:block;
+  width:6px;
+  height:30px;
+  background:#9AA014;
+  border-radius:999px;
+}
+
+.spark-1{
+  top:5px;
+  left:34px;
+  transform:rotate(-35deg);
+}
+
+.spark-2{
+  top:-8px;
+  left:102px;
+}
+
+.spark-3{
+  top:5px;
+  right:34px;
+  transform:rotate(35deg);
+}
+
+.spark-4{
+  bottom:5px;
+  left:34px;
+  transform:rotate(35deg);
+}
+
+.spark-5{
+  bottom:-8px;
+  left:102px;
+}
+
+.spark-6{
+  bottom:5px;
+  right:34px;
+  transform:rotate(-35deg);
 }
