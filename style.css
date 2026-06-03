@@ -1,90 +1,116 @@
 @font-face {
-    font-family: 'EimiTegaki';
-    src: url('./fonts/Eimi00_tegaki-Regular.otf') format('opentype');
-    font-weight: normal;
-    font-style: normal;
+  font-family: 'EimiTegaki';
+  src: url('./fonts/Eimi00_tegaki-Regular.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
 }
 
-body{
-    margin:0;
-    background:#F2F0E7;
-    font-family: 'EimiTegaki', sans-serif;
+body {
+  margin: 0;
+  background: #F2F0E7;
+  font-family: 'EimiTegaki', sans-serif;
 }
 
-.header{
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  height:100px;
-  position:relative;
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 110px;
+  position: relative;
 }
 
-.menu-btn{
-  position:absolute;
-  left:20px;
-  top:28px;
-  background:none;
-  border:none;
-  font-size:32px;
-  cursor:pointer;
-  z-index:30;
+.menu-btn {
+  position: absolute;
+  left: 24px;
+  top: 32px;
+  background: none;
+  border: none;
+  font-size: 32px;
+  cursor: pointer;
+  z-index: 30;
 }
 
-.logo-wrap{
-  position:relative;
-  margin:0;
-  width:230px;
-  height:90px;
-  display:flex;
-  justify-content:center;
-  align-items:flex-end;
+.logo-wrap {
+  position: relative;
+  margin: 0;
+  width: 230px;
+  height: 95px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
 }
 
-.logo{
-  font-family:'EimiTegaki', sans-serif;
-  font-size:42px;
-  color:#9AA014;
-  font-weight:normal;
-  line-height:0.75;
-  text-align:center;
-  letter-spacing:0.04em;
+.logo {
+  font-family: 'EimiTegaki', sans-serif;
+  font-size: 42px;
+  color: #9AA014;
+  font-weight: normal;
+  line-height: 0.75;
+  text-align: center;
+  letter-spacing: 0.04em;
 }
 
-.logo span{
-  display:block;
+.logo span {
+  display: block;
 }
 
-.drawer{
-  position:fixed;
-  top:0;
-  left:-72%;
-  width:72%;
-  height:100vh;
-  background:#9AA014;
-  z-index:20;
-  padding:120px 0 0 56px;
-  transition:left 0.35s ease;
+.spark {
+  position: absolute;
+  width: 6px;
+  height: 28px;
+  background: #9AA014;
+  border-radius: 999px;
+  top: 0;
 }
 
-.spark{
-  position:absolute;
-  width:6px;
-  height:28px;
-  background:#9AA014;
-  border-radius:999px;
-  top:0;
+.spark-left {
+  left: 54px;
+  transform: rotate(-35deg);
 }
 
-.spark-left{
-  left:54px;
-  transform:rotate(-35deg);
+.spark-center {
+  left: 112px;
 }
 
-.spark-center{
-  left:112px;
+.spark-right {
+  right: 54px;
+  transform: rotate(35deg);
 }
 
-.spark-right{
-  right:54px;
-  transform:rotate(35deg);
+.drawer {
+  position: fixed;
+  top: 0;
+  left: -72%;
+  width: 72%;
+  height: 100vh;
+  background: #9AA014;
+  z-index: 20;
+  padding: 120px 0 0 56px;
+  transition: left 0.35s ease;
+}
+
+.drawer.open {
+  left: 0;
+}
+
+.drawer a {
+  display: block;
+  font-family: 'EimiTegaki', sans-serif;
+  color: #fff;
+  text-decoration: none;
+  font-size: 42px;
+  margin-bottom: 28px;
+  letter-spacing: 0.05em;
+}
+
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(242, 240, 231, 0.7);
+  z-index: 10;
+  display: none;
+}
+
+.overlay.open {
+  display: block;
 }
