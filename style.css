@@ -12,81 +12,33 @@ body{
 }
 
 .header{
-    display:flex;
-    align-items:center;
-    justify-content:center;
-
-    height:80px;
-
-    position:relative;
-}
-
-.menu-btn{
-    position:absolute;
-    left:20px;
-    background:none;
-    border:none;
-    font-size:32px;
-    cursor:pointer;
-    z-index:30;
-}
-
-.drawer{
-  position:fixed;
-  top:0;
-  left:-72%;
-  width:72%;
-  height:100vh;
-  background:#9AA014;
-  z-index:20;
-  padding:180px 0 0 56px;
-  transition:left 0.35s ease;
-}
-
-.drawer.open{
-  left:0;
-}
-
-.drawer a{
-  display:block;
-  font-family:'EimiTegaki', sans-serif;
-  color:#fff;
-  text-decoration:none;
-  font-size:42px;
-  margin-bottom:28px;
-  letter-spacing:0.05em;
-}
-
-.overlay{
-  position:fixed;
-  inset:0;
-  background:rgba(242,240,231,0.7);
-  z-index:10;
-  display:none;
-}
-
-.overlay.open{
-  display:block;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  height:100px;
+  position:relative;
 }
 
 .logo-wrap{
   position:relative;
   margin:0;
-  width:210px;
-  height:90px;
+  width:220px;
+  height:100px;
   display:flex;
   justify-content:center;
   align-items:center;
+  overflow:visible;
 }
+
 .logo{
-    margin:0;
-    font-family: 'EimiTegaki', sans-serif;
-    font-size: 48px;
-    color: #9AA014;
-    font-weight: normal;
-    line-height: 0.75;
-    text-align: center;
-    letter-spacing: 0.04em;
+  margin:0;
+  font-family:'EimiTegaki', sans-serif;
+  font-size:42px;
+  color:#9AA014;
+  font-weight:normal;
+  line-height:0.75;
+  text-align:center;
+  letter-spacing:0.04em;
 }
 
 .logo span{
@@ -97,41 +49,36 @@ body{
   position:absolute;
   display:block;
   width:6px;
-  height:30px;
+  height:28px;
   background:#9AA014;
   border-radius:999px;
 }
 
 .spark-1{
-  top:5px;
+  top:14px;
   left:34px;
   transform:rotate(-35deg);
 }
 
 .spark-2{
-  top:-8px;
-  left:102px;
+  top:2px;
+  left:107px;
 }
 
 .spark-3{
-  top:5px;
+  top:14px;
   right:34px;
   transform:rotate(35deg);
 }
 
 .spark-4{
-  bottom:5px;
-  left:34px;
-  transform:rotate(35deg);
+  display:none;
 }
 
 .spark-5{
-  bottom:-8px;
-  left:102px;
+  display:none;
 }
 
 .spark-6{
-  bottom:5px;
-  right:34px;
-  transform:rotate(-35deg);
+  display:none;
 }
